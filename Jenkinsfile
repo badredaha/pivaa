@@ -34,7 +34,7 @@ stage('Running Build') {
        steps {
         parallel (
           "Check Dependency": {
-            sh 'fastlane build'
+            sh 'fastlane checkdependency'
           },"Sonar Metrics": {
             sh 'fastlane metrics'
           }
